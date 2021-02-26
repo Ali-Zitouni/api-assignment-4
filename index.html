@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- MY CSS Links -->
+  <link rel="stylesheet" href="style.css">
+  <title>Weather API Documentation</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-expand-sm"> 
+    <a class="navbar-brand title" href="">Weather API Documentation</a> 
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#project">Project Context</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#working">Working</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#projectfor">Target Audience</a>
+      </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="project_content">
+      <div class="project_detail" id="project">
+          <h2>What Is The Project ?</h2>
+          <p>The project is about: <b><q><i>Weather Forecasting.</i></q></b> Weather forecasting is the application of Science and Technology to predict the conditions of the Atmosphere for a given Location and Time. Weather impacts nearly every areas of our lives – Weather conditions such as fog, rain, and snow impact commutes to work and travelling around the globe So, I decided to manage the services of Weather Forecasting by using <b>APIs</b>. So, We are all aware of the Weather conditions in our area.
+         </p>
+      </div>
+      <div class="project_detail" id="working">
+        <h2>How It Works ?</h2>
+        <p>With the Weather API everyone can retrieve current weather observations from over 47,000 live weather stations, historical weather data for the past 10 years from our archive of more than 120,000 stations, and highly localized weather forecasts for any point on the globe using the world's most trusted weather models!
+        </p>
+        <div class="project_working">
+            <h2>Methods To Access Weather Data :</h2>
+            <ul>
+                <li>Latitude/longitude</li>
+                <li>City name</li>
+                <li>City ID</li>
+                <li>Weather station ID</li>
+                <li>Airport ICAO code</li>
+                <li>Postal (zip) code for any country in the world</li>
+            </ul>
+        </div>  
+        <div class="project_working">
+            <h2>Getting a Specific Place :</h2>
+            <div class="media">
+                <img src="https://cdn.glitch.com/ae773e7e-ccae-4067-852c-2ae53e1d2613%2Fweather.PNG?v=1614249552940" class="align-self-center mr-3 ml-3" alt="...">
+                <div class="media-body">
+                  <p class="p-3">Rome is a big city and sometimes we may want to find a more accurate place. Let’s say I want to get the weather forecast for a famous place in Rome. For example, the Colosseum. According to Wiki, this legendary building has the following geo-coordinates:
+                    <br>
+                    <b>41°53′25″N 12°29′33″E / 41.8902°N 12.4924°E / 41.8902; 12.4924</b>
+                    
+                    Create a JavaScript file in the project folder and type next lines:</p>
+                </div>
+              </div>
+        </div>  
+        <div class="project_working mt-4">
+            <h2>Client Request :</h2>
+            <div class="media">
+                <div class="media-body align-self-center">
+                  <p class="p-3">The first method handles the get request (i.e., visiting the page with the named URL) for the server.
+                    <br>
+                    Here we use the unirest object for preparing and sending a get request to the API. It has a complete endpoint address, headers for RapidAPI and all the required params: appid, longitude and latitude, units and mode for returning response already in HTML.
+                    <br>
+                    The next step is to create a callback function <b>unirest.get().end()</b>, that creates a dynamic HTML response via <b>writeHead()</b> and <b>write()</b> methods.
+                    <br>
+                    Finally, it logs to the console with the phrase “Colosseum, I am coming!”.
+                    <br>
+                    To run our server, we used the <b>app.listen()</b> method (note that 8081 – port number for the localhost URL).</p>
+                </div>
+                <img src="https://cdn.glitch.com/ae773e7e-ccae-4067-852c-2ae53e1d2613%2Fhandlereq.PNG?v=1614249553702" class="align-self-center m-3" alt="...">
+              </div>
+        </div> 
+        <div class="project_working mt-4">
+            <h2>Get Response :</h2>
+            <div class="media">
+                <img src="https://cdn.glitch.com/ae773e7e-ccae-4067-852c-2ae53e1d2613%2Fresponse.PNG?v=1614249552817" class="align-self-center m-3" alt="...">
+                <div class="media-body align-self-center">
+                  <p class="p-3">Now let’s try to run our code in the terminal:
+                    <br>
+                    <b>$ node colos.js</b>
+                    The console response should be as follows:
+                    <br>
+                    <b>Server running at https://127.0.0.1:8081/</b>
+                    <br>
+                    <b>Finally, We Are All Set !</b>
+                </div>  
+              </div>
+        </div>
+     </div>
+     <div class="project_detail mt-3" id="projectfor">
+        <h2>Who Is It For ?</h2>
+        <p>
+            Every Single Person who have Internet Connection could access the Temperature Conditions. I want to allow users who come to my site to see the current wind and temperature conditions.
+       </p>
+    </div>
+    <div class="project_detail mt-3" id="project">
+        <h2>Thank You !</h2>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
