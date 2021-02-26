@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* colors */
+:root{
+    --primaryclr:#f7f6e7;
+    --navclr:#00af91;
+    --secondaryclr: #333;
+    --mediaclr:#d0f7e9;
+}
+/* Global CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+/* Top Nav */
+nav{
+    height: 80px;
+    background-color: var(--primaryclr);
+}
+nav ul li{
+    padding-top: 3%;
+}
+nav ul li a{
+    color: var(--navclr);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 700;
+}
+nav ul li a:hover{
+    color: var(--secondaryclr);
+}
+nav .title{
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--navclr);
+    padding-left: 50px;
+}
+nav .title:hover{
+    color: var(--secondaryclr);
+}
+/* Content CSS */
+.container-fluid .project_content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container-fluid .project_content .project_detail h2{
+    border-bottom: 5px solid var(--navclr);
+    padding-bottom: 10px;
+    border-radius: 2px;
+}
+.container-fluid .project_content .project_detail p{
+    line-height: 1.5;
+    font-size: 19px;
+}
+.container-fluid .project_content .project_detail .project_working{
+    padding-left: 30px;
+}
+.container-fluid .project_content .project_detail .project_working ul{
+    padding-left: 30px;
+}
+.container-fluid .project_content .project_detail .project_working ul li{
+    line-height: 1.5;
+    font-size: 19px;
+}
+.container-fluid .project_content .project_detail .project_working .media{
+    border: 1px solid var(--navclr);
+    background: var(--mediaclr);
+}
